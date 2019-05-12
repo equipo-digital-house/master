@@ -14,7 +14,7 @@ Como colaborar en el proyecto.
 - Paso 5. Apunta el repositorio master local con el repositorio master remoto (git add origin https://github.com/equipo-digital-house/master.git)
 - Paso 6. realiza el git config user.name "tuUserName" y el git config user.email "tuEmail@gmail.com"  Ojo. estas credenciales son las que tuvimos que configurar en gitHub.
 - Paso 7. En este punto se supone que deben modificar el archivo que les haya tocado codear y una vez que hayan hecho los cambios y esté probado en el localhost, debemos enviarlo al repositorio remoto.
-- para esto debemos volver a Git Bash y posicionarnos en nuestra carpeta master local e indicarle que vamos a agregar archivos para enviar al remoto (git add .) te agrega todos los archivos que hayan sufrido modificacion al stage. (los está preparando para poder empaquetarlos y despues enviarlos)
+-para esto debemos volver a Git Bash y posicionarnos en nuestra carpeta master local e indicarle que vamos a agregar archivos para enviar al remoto (git add .) te agrega todos los archivos que hayan sufrido modificacion al stage. (los está preparando para poder empaquetarlos y despues enviarlos)
 - Paso 8. realizar el commit el cual debe ir con un mensaje que indique las modificaciones que se efectuaron (git commit -m "cambios en pagina x "), esto lo que hace es empaquetar lo agregado mas el mensaje que será el commit de cambios.
 - Paso 9. realizar el push para enviar a repositorio remoto nuestros cambios (git push origin master ) la primera vez que lo hagas te pedira tu password de gitHub, si todo sale bien te mostrara que ha enviado los archivos al repositorio master remoto. Puedes chequear lleno al sitio gitHub y comprobar que estan alli los archivos enviados.
 
