@@ -136,19 +136,24 @@ footer {
 	overflow:hidden; /* Eliminamos errores de float */
 	background-image: url("../img/bg-seriales2.png");
 
-}
 
+}
+footer .wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 footer .logo {
 	color:#f2f2f2;
 	font-size:50px;
 	line-height:200px;
-	float:left;
 
 }
 footer nav {
-	float:left;
+	/**float:left;**/
 	line-height:200px;
+
 }
 
 footer nav a {
@@ -164,6 +169,7 @@ footer nav a {
 	-webkit-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
 	transition:all 500ms ease;
+
 }
 
 footer nav a:hover {

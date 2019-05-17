@@ -11,8 +11,8 @@
       <a href="#">Jugar!</a>
       <a href="#">Login</a>
       <a href="#">Registro</a>
-      <a href="#">Preguntas</a>
+      <a href="preguntas.php">Preguntas</a>
     </nav>
   </div>
-  
+
 </header>
