@@ -1,0 +1,174 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+header {
+	width:100%; /* Establecemos que el header abarque el 100% del documento */
+	overflow:hidden; /* Eliminamos errores de float */
+	background-image: url("../img/bg-seriales2.png");
+
+}
+
+.wrapper {
+	width:90%; /* Establecemos que el ancho sera del 90% */
+	max-width:1000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
+	margin:auto; /* Centramos los elementos */
+	overflow:hidden; /* Eliminamos errores de float */
+}
+
+header .logo {
+	color:#f2f2f2;
+	font-size:50px;
+	line-height:200px;
+	float:left;
+}
+
+header nav {
+	float:right;
+	line-height:200px;
+}
+
+header nav a {
+	display:inline-block;
+	color:#ffffff;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:20px;
+  background:#f34573;
+  border-radius:50px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+
+header nav a:hover {
+  color:#ffffff;
+	background:#2a6171;
+	border-radius:50px;
+  text-decoration:none;
+}
+
+
+.boton-rosa{
+
+color: #ffffff;
+padding: 12px;
+border-radius: 10px;
+background-color: #fe5f97;
+font-family: "Verdana";
+font-size: 14px;
+font-weight: bold;
+
+/*background-color: #75cac3;*/
+}
+.boton-rosa:hover  {
+
+color: #ffffff;
+padding: 14px;
+border-radius: 10px;
+background-color: #32cfbc;
+font-family: "Verdana";
+font-size: 14px;
+font-weight: bold;
+text-decoration: none;
+
+/*background-color: #75cac3;*/
+}
+
+
+.card-header{
+
+background-color: #f34573;
+color: white;
+}
+
+.banner{
+  margin-bottom:30px;
+
+height: 60px;
+width: 100%;
+
+background-image: url("../img/bannerSeries1.png");
+
+}
+.banner2{
+
+margin-top: 30px;
+height: 60px;
+width: 100%;
+
+background-image: url("../img/bannerSeries2.png");
+
+}
+
+
+body{
+
+  background-image: url("../img/bg-seriales.png");
+}
+.font-preguntas{
+
+  font-family: Verdana;
+  text-align: right;
+  font-weight: bold;
+ color: white;
+ text-decoration: none;
+}
+.font-preguntas:hover{
+
+  font-family: Verdana;
+  text-align: right;
+  font-weight: bold;
+ color: #75cac3;
+ text-decoration: none;
+}
+section {
+  margin: 0 auto;
+  width: 80%;
+}
+footer {
+
+	width:100%; /* Establecemos que el header abarque el 100% del documento */
+	overflow:hidden; /* Eliminamos errores de float */
+	background-image: url("../img/bg-seriales2.png");
+
+}
+
+
+footer .logo {
+	color:#f2f2f2;
+	font-size:50px;
+	line-height:200px;
+	float:left;
+
+}
+footer nav {
+	float:left;
+	line-height:200px;
+}
+
+footer nav a {
+	display:inline-block;
+	color:#ffffff;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:20px;
+  background:#f34573;
+  border-radius:50px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+
+footer nav a:hover {
+  color:#ffffff;
+	background:#2a6171;
+	border-radius:50px;
+  text-decoration:none;
+}
