@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  /* background-image: url(../img/bg-seriales.png); */
+}
+
+nav {
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  margin: 0 auto;
+}
+
+.menu-items {
+  align-items: center;
+  display: flex;
+
+}
+
+.menu-items li {
+  list-style-type: none;
+text-align: center;
+border: 2px solid #2a6171;
+border-radius: 30px;
+width: 45%;
+padding: 5px 0 5px 0;
+background-color: #75cac3;
+margin: auto;
+}
+
+.menu-items li a {
+  text-transform: uppercase;
+  font-family: 'Righteous', cursive;
+  color: white;
+}
+
+main {
+  padding: 30px;
+    background-image: url(../img/bg-seriales.png);
+
+}
+
+.subtitulo {
+  color: #f34472;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.titulo {
+  text-align: center;
+  margin: 20px;
+  font-family: 'Righteous', cursive;
+  color: #2b6170;
+  font-size: 2.6rem;
+}
+
+.registro {
+  display: flex;
+  flex-direction: column;
+  background-color: #f34573;
+  padding: 50px 150px;
+  border-radius: 30px;
+  height: 400px;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
+}
+
+.registro label {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.aclaracion {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-registro {
+  background-color: #75cac2;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 1.3rem;
+    width: 40%;
+    justify-content: center;
+    margin: 40px auto 0;
+    border: 2px solid #2b6170;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+footer {
+  background-color: #75cac3;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  font-size: 1.2rem;
+}
