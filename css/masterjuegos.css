@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*Css Home*/
+.bannerHome {
+  align-self: center;
+}
+
+
+.explicacion {
+  align-self: center;
+  background-color: #F34573;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  text-align: justify;
+  border-bottom-right-radius: 20px;
+  box-shadow: #2a6171 2px 2px;
+}
+
+.explicación p {
+  font-family: 'Lato', sans-serif;
+}
+
+.tarjeta-1 {
+  background-image: url("img-Aldi/bg-seriales.png");
+  display: flex;
+  padding: 2% 3%;
+}
+
+.botonJugar {
+  text-align: center;
+  border: 2px solid #2a6171;
+  border-radius: 30px;
+  width: 45%;
+  padding: 5px 0 5px 0;
+  background-color: #75cac3;
+  margin: auto;
+  color: #2a6171;
+  font-family: 'Righteous', cursive;
+}
+
+/*Css Juego*/
+.tarjetaJuegoA {
+  background-image: url("img-Aldi/bg-seriales.png");
+  display: flex;
+  padding: 0 7%;
+
+}
+
+.titulo {
+  font-family: 'Righteous', cursive;
+  align-self: center;
+  color: white;
+  background-color: #F34573;
+  box-shadow: #2a6171 4px 4px;
+  border-bottom-right-radius: 20px;
+}
+
+.pregunta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.respuesta {
+  flex-basis: 50%;
+}
+
+.respuesta button {
+  font-family: 'Lato', sans-serif;
+  color: #2a6171;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #75cac3;
+  border: 3px solid #2a6171;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  /*background-image: url(img-Aldi/LaCasaDePapel1.jpg);
+  background-size: cover;*/
+  }
+
+  /*Media queries*/
+ @media (min-width:320px){
+  .tarjeta-1, .tarjetaJuegoA {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .bannerHome {
+    border-left: none;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  #banner1 {display: block;}
+  #banner2 {display: none;}
+
+  .bannerHome img {
+    max-width: 100%;
+  }
+
+  .tarjetaJuegoA {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .titulo{
+    text-align: center;
+    padding: 20px;
+  }
+
+  @media (min-width:720px){
+    .tarjeta-1 {
+
+    }
+
+    #banner1 {display: none;}
+    #banner2 {display: block;}
+
+    .bannerHome img {
+      max-width: 100%;
+    }
+
+    .tarjetaJuegoA {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    .pregunta{
+      height: 75%;
+    }
+  }
+
+
+  @media (min-width:1200px){
+    .bannerHome img {
+      width: 100vw;
+    }
+
+    .explicación p {
+      font-size: 2em;
+    }
+
+    .tarjetaJuegoA {
+    }
+
+    .titulo,
+    .pregunta {
+      width: 75%;
+    }
+
+    .titulo{
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+    }
+
+    .respuesta {
+      font-size: 2em;
+    }
+
+  }

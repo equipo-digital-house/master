@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-    <link rel="stylesheet" href="masterjuegos.css">
+    <link rel="stylesheet" href="css/masterjuegos.css">
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -28,28 +28,28 @@
       </nav>
 
       <section>
-        <div class="tarjeta">
+        <div class="tarjetaJuegoA">
           <?php require_once('php/baseDatos.php');
           foreach ($titulo as $key): ?>
           <h2 class="titulo"><?=$key["Pregunta"]?></h2>
 
 
             <div class="pregunta">
-              <article class="celebridad1">
+              <div class="respuesta">
                 <button type="button" name="button">Stephen Hawking</button>
-              </article>
+              </div>
 
-              <article class="celebridad2">
+              <div class="respuesta">
                 <button type="button" name="button">N'sync</button>
-              </article>
+              </div>
 
-              <article class="celebridad3">
+              <div class="respuesta">
                 <button type="button" name="button">Kid Rock</button>
-              </article>
+              </div>
 
-              <article class="celebridad4">
+              <div class="respuesta">
                 <button type="button" name="button">Backstreet Boys</button>
-                </article>
+              </div>
 
             </div>
       <?php endforeach; ?>
