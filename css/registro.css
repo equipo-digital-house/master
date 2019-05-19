@@ -312,3 +312,40 @@ footer a {
     }
 
   }
+  /**perteneciente a pagina de preguntas frecuentes**/
+main .main-pf {
+  padding: 30px;
+    background-image: url(../img/bg-seriales.png);
+
+}
+
+.preguntas-frecuentes{
+width:80%;
+margin: 0 auto;
+}
+.card-header{
+width: 100%;
+background-color: #f34573;
+color: black;
+
+}
+.card-body{
+text-align: left;
+font-family: Verdana, cursive;
+}
+
+.font-preguntas{
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  font-size: 1.5rem;
+  text-align: right;
+  color: white;
+
+}
+.font-preguntas:hover{
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  text-align: right;
+  color: #75cac3;
+
+}
