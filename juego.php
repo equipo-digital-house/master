@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
-    <link rel="stylesheet" href="css/masterjuegos.css">
+    <link rel="stylesheet" href="css/registro.css">
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,7 +21,7 @@
     <title>Jugar</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
       <nav>
         <?php include('php/header.php'); ?>
       </nav>
@@ -31,7 +30,7 @@
         <div class="tarjetaJuegoA">
           <?php require_once('php/baseDatos.php');
           foreach ($titulo as $key): ?>
-          <h2 class="titulo"><?=$key["Pregunta"]?></h2>
+          <h2 class="tituloA"><?=$key["Pregunta"]?></h2>
 
 
             <div class="pregunta">
