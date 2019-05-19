@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 
@@ -21,23 +24,15 @@
   <body>
     <div class="container-fluid">
       <nav>
-        <div class="imagenesnav">
-        <img class="logo" src="img/logo.png" alt="seriales">
-        <img class="banner" src="img/banner1.png" alt="banner">
-      </div>
-
-        <ul class=botonesNav type="none">
-          <li><a href="index1.php">Home</a></li>
-          <li><a href="juego.php">Jugar</a></li>
-          <li><a href="login.php">Log in</a></li>
-          <li><a href="registro.php">Registrate</a></li>
-          <li><a href="preguntas.php">Preguntas</a></li>
-        </ul>
+        <?php include('php/header.php'); ?>
       </nav>
 
       <section>
         <div class="tarjeta">
-          <h2 class="titulo">¿Cuál de las siguientes celebridades </br> no apareción aún en Los Simpson?</h2>
+          <?php require_once('php/baseDatos.php');
+          foreach ($titulo as $key): ?>
+          <h2 class="titulo"><?=$key["Pregunta"]?></h2>
+
 
             <div class="pregunta">
               <article class="celebridad1">
@@ -55,16 +50,14 @@
               <article class="celebridad4">
                 <button type="button" name="button">Backstreet Boys</button>
                 </article>
+
             </div>
+      <?php endforeach; ?>
         </div>
       </section>
 
       <footer>
-        <ul class="footer" type="none">
-          <li><a href="#">Preguntas frecuentes</a></li>
-          <li><a href="#">Sobre Seriales</a></li>
-          <li><a href="#">Contactanos</a></li>
-        </ul>
+      <?php include('php/footer.php'); ?>
       </footer>
 
     </div>

@@ -31,7 +31,14 @@ $preguntas=[
   8=>["Numero"=>"#8",
       "Nombre"=>"¿Puedo invitar a mis amigos a jugar?",
       "Descripcion"=>"Si, nos encantaría que invitaras a tus amigos a jugar. Además te premiamos con puntaje adicional por cada amigo que invites."]
+    ];
+    $titulo = [
+      1=>["Pregunta"=>"¿Cuál de las siguientes celebridades <br> no apareció aún en Los Simpson?",
 
+          "Respuesta" => [1 => "Sephen Hawking",
+                          2 => "N'sync",
+                          3 => "Kid Rock",
+                          4 => "Backstreet Boys"]]
 
     ];
 
