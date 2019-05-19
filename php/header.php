@@ -1,19 +1,13 @@
 <?php
 ?>
 <header>
-  <nav class="row">
-    <ul class="col-lg-5 menu-items">
-      <li><a href="#">inicio</a> </li>
-      <li><a href="#">preguntas</a> </li>
-    </ul>
-
-    <div class="col-12 col-lg-2">
-      <img class="logo" src="img/logo.png" alt="Serial">
-    </div>
-
-    <ul class="col-lg-5 menu-items">
-      <li><a href="#">registro</a> </li>
-      <li><a href="#">login</a> </li>
+  <nav>
+    <ul class="row">
+      <li class="col-12 order-1 flex-column order-lg-0 flex-lg-row col-lg-2 menu-items"><a href="index1.php">inicio</a></li>
+      <li class="col-12 order-2 flex-column order-lg-1 flex-lg-row col-lg-2 menu-items"><a href="preguntas.php">preguntas</a></li>
+      <img class="order-0 offset-3 col-6 order-lg-3 col-lg-2 offset-lg-0 logo" src="img/logo.png" alt="Seriales">
+      <li class="col-12 order-4 flex-column order-lg-4 flex-lg-row col-lg-2 menu-items"><a href="registro.php">registro</a> </li>
+      <li class="col-12 order-5 flex-column order-lg-5 flex-lg-row col-lg-2 menu-items"><a href="login.php">login</a> </li>
     </ul>
   </nav>
 </header>
