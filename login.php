@@ -18,18 +18,22 @@
     <main>
       <h3 class="subtitulo">¿Querés jugar?</h3>
       <h2 class="titulo">Iniciar sesion</h2>
-      <form class="registro" action="jugar.php" method="post">
-        <label for="nombre">Usuario o Mail*</label>
-        <input type="text" name="nombre" value="" required>
-        <label for="contrasenia">Contraseña*</label>
-        <input type="password" name="contrasenia" value=""required>
-        <button class="btn-formulario" type="submit" name="submit">iniciar sesión</button>
-        <div class="recordar">
-          <input name="recordarme" type="checkbox" id="check1" value="recordarme">
-          <label for="check1">Recordarme</label>
+      <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+          <form class="registro" action="jugar.php" method="post">
+            <label for="nombre">Usuario o Mail*</label>
+            <input type="text" name="nombre" value="" required>
+            <label for="contrasenia">Contraseña*</label>
+            <input type="password" name="contrasenia" value=""required>
+            <button class="btn-formulario" type="submit" name="submit">iniciar sesión</button>
+            <div class="recordar">
+              <input name="recordarme" type="checkbox" id="check1" value="recordarme">
+              <label for="check1">Recordarme</label>
+            </div>
+            <a class="olvidar-pass" href="#">¿Olvidó su contraseña?</a>
+          </form>
         </div>
-        <a class="olvidar-pass" href="#">¿Olvidó su contraseña?</a>
-      </form>
+      </div>
       <p class="aclaracion">Los campos con * deben ser completados</p>
     </main>
 

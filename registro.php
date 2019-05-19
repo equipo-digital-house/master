@@ -18,21 +18,25 @@
     <main>
       <h3 class="subtitulo">¿Todavía no tenés cuenta?</h3>
       <h2 class="titulo">Registrate en segundos</h2>
-      <form class="registro" action="jugar.php" method="post">
-        <label for="nombre">Nombre de usuario*</label>
-        <input type="text" name="nombre" value="" required>
-        <label for="mail">Tu correo electrónico*</label>
-        <input type="email" name="mail" value="" required>
-        <label for="contrasenia">Contraseña*</label>
-        <input type="password" name="contrasenia" value=""required>
-        <button class="btn-formulario" type="submit" name="submit">Jugar!</button>
-      </form>
+      <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+          <form class="registro" action="jugar.php" method="post">
+            <label for="nombre">Nombre de usuario*</label>
+            <input type="text" name="nombre" value="" required>
+            <label for="mail">Tu correo electrónico*</label>
+            <input type="email" name="mail" value="" required>
+            <label for="contrasenia">Contraseña*</label>
+            <input type="password" name="contrasenia" value=""required>
+            <button class="btn-formulario" type="submit" name="submit">Jugar!</button>
+          </form>          
+        </div>
+      </div>
       <p class="aclaracion">Los campos con * deben ser completados</p>
     </main>
 
-    <footer>
-      <a href="mailto:hola@gmail.com">Contacta con nosotras</a>
-    </footer>
+    <?php
+    require_once('php/footer.php');
+    ?>
   </div>
 </body>
 </html>
