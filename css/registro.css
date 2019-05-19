@@ -338,14 +338,14 @@ font-family: Verdana, cursive;
   text-decoration: none;
   font-family: 'Righteous', cursive;
   font-size: 1.5rem;
-  text-align: right;
+  text-align: left;
   color: white;
 
 }
 .font-preguntas:hover{
   text-decoration: none;
   font-family: 'Righteous', cursive;
-  text-align: right;
+  text-align: left;
   color: #75cac3;
 
 }
