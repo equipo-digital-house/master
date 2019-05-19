@@ -1,18 +1,19 @@
 <?php
 ?>
 <header>
-  <div class="wrapper">
-    <div class="logo">
-        <img src="img/LogoSerialesFB.png" width="70%" alt="Seriales">
+  <nav class="row">
+    <ul class="col-lg-5 menu-items">
+      <li><a href="#">inicio</a> </li>
+      <li><a href="#">preguntas</a> </li>
+    </ul>
+
+    <div class="col-12 col-lg-2">
+      <img class="logo" src="img/logo.png" alt="Serial">
     </div>
 
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Jugar!</a>
-      <a href="#">Login</a>
-      <a href="#">Registro</a>
-      <a href="preguntas.php">Preguntas</a>
-    </nav>
-  </div>
-
+    <ul class="col-lg-5 menu-items">
+      <li><a href="#">registro</a> </li>
+      <li><a href="#">login</a> </li>
+    </ul>
+  </nav>
 </header>

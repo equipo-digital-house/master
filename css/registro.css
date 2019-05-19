@@ -14,6 +14,7 @@ nav {
 .logo {
   display: flex;
   margin: 0 auto;
+  width: 100%;
 }
 
 .menu-items {
@@ -23,20 +24,26 @@ nav {
 }
 
 .menu-items li {
-  list-style-type: none;
+list-style-type: none;
 text-align: center;
-border: 2px solid #2a6171;
+width: 30%;
 border-radius: 30px;
-width: 45%;
-padding: 5px 0 5px 0;
 background-color: #75cac3;
 margin: auto;
+}
+
+.menu-items li:hover {
+  background-color: #f34472;
 }
 
 .menu-items li a {
   text-transform: uppercase;
   font-family: 'Righteous', cursive;
   color: white;
+  display: block;
+  padding: 5px 0 5px 0;
+  border: 2px solid #2a6171;
+  border-radius: 30px;
 }
 
 main {
@@ -72,7 +79,6 @@ main {
 }
 
 .registro label {
-  text-transform: capitalize;
   font-size: 1.2rem;
 }
 
@@ -81,17 +87,38 @@ main {
   text-align: center;
 }
 
-.btn-registro {
+.btn-formulario {
   background-color: #75cac2;
-    color: white;
-    font-family: 'Righteous', cursive;
-    font-size: 1.3rem;
-    width: 40%;
-    justify-content: center;
-    margin: 40px auto 0;
-    border: 2px solid #2b6170;
-    border-radius: 30px;
-    padding: 10px;
+  color: white;
+  font-family: 'Righteous', cursive;
+  font-size: 1.3rem;
+  justify-content: center;
+  margin: 40px auto 0;
+  border: 2px solid #2b6170;
+  border-radius: 30px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.recordar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+#check1 {
+  margin-right: 8px;
+}
+
+.recordar label {
+  font-size: 1rem;
+}
+
+.olvidar-pass {
+  text-align: right;
+  color: white;
 }
 
 footer {

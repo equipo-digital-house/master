@@ -11,35 +11,21 @@
 </head>
 <body>
   <div class="container-fluid p-0">
-    <header>
-      <nav class="row">
-        <ul class="col-lg-5 menu-items">
-          <li><a href="#">inicio</a> </li>
-          <li><a href="#">preguntas frecuentes</a> </li>
-        </ul>
-
-        <div class="col-12 col-lg-2">
-          <img class="logo" src="img/logo.png" alt="Serial">
-        </div>
-
-        <ul class="col-lg-5 menu-items">
-          <li><a href="#">login</a> </li>
-          <li><a href="#">registro</a> </li>
-        </ul>
-      </nav>
-    </header>
+    <?php
+    require_once('php/header.php');
+    ?>
 
     <main>
-      <h3 class="subtitulo">¿Todavia no tenés cuenta?</h3>
+      <h3 class="subtitulo">¿Todavía no tenés cuenta?</h3>
       <h2 class="titulo">Registrate en segundos</h2>
       <form class="registro" action="jugar.php" method="post">
-        <label for="nombre">nombre de usuario*</label>
+        <label for="nombre">Nombre de usuario*</label>
         <input type="text" name="nombre" value="" required>
-        <label for="mail">tu correo electrónico*</label>
+        <label for="mail">Tu correo electrónico*</label>
         <input type="email" name="mail" value="" required>
-        <label for="contrasenia">contraseña*</label>
+        <label for="contrasenia">Contraseña*</label>
         <input type="password" name="contrasenia" value=""required>
-        <button class="btn-registro" type="submit" name="submit">Jugar!</button>
+        <button class="btn-formulario" type="submit" name="submit">Jugar!</button>
       </form>
       <p class="aclaracion">Los campos con * deben ser completados</p>
     </main>
