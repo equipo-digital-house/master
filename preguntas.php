@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato|Righteous" rel="stylesheet">
     <title>Preguntas Frecuentes - Seriales</title>
 
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/master.css">
 
   </head>
   <body>

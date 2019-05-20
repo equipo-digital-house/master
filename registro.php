@@ -7,7 +7,7 @@
   <title>Seriales - Registro</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato|Righteous" rel="stylesheet">
-  <link rel="stylesheet" href="css/registro.css">
+  <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
   <div class="container-fluid p-0">
@@ -28,7 +28,7 @@
             <label for="contrasenia">Contraseña*</label>
             <input type="password" name="contrasenia" value=""required>
             <button class="btn-formulario" type="submit" name="submit">Jugar!</button>
-          </form>          
+          </form>
         </div>
       </div>
       <p class="aclaracion">Los campos con * deben ser completados</p>
