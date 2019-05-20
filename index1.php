@@ -23,8 +23,10 @@
   <body>
     <div class="container-fluid p-0">
 
-        <?php include('php/header.php'); ?>
-      
+        <?php
+         require_once('php/header.php');
+       ?>
+
 
       <section>
         <div class="tarjeta-1">
@@ -43,7 +45,9 @@
       </section>
 
 
-      <?php include('php/footer.php'); ?>
+      <?php
+      require_once('php/footer.php');
+      ?>
 
 
     </div>

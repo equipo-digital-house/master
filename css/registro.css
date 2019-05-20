@@ -5,6 +5,7 @@
 }
 
 nav {
+  background-image: url(../img/bg-seriales3.png);
   padding: 20px;
 }
 
@@ -358,8 +359,9 @@ font-family: Verdana, cursive;
 .main-footer{
 
   background-image: url(../img/bg-seriales.png);
+
 }
-footer {
+.footer-principal{
 
 	width:100%; /* Establecemos que el header abarque el 100% del documento */
 
@@ -377,7 +379,7 @@ footer {
   border-radius: 20px 20px 0 0;
 
   }
-  footer a{
+  .footer-principal a{
     width: 16.66%;
     font-family: 'Righteous', cursive;
     font-size: 1.2rem;
@@ -388,11 +390,11 @@ footer {
     border-left:1px solid #fff;
 
   }
-  footer a:hover{
+  .footer-principal:hover{
     color:#f34573;
     text-decoration: none;
     }
-    footer a:nth-child(1){
+  .footer-principal a:nth-child(1){
       border-left: 0;
     }
 
