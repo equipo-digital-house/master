@@ -122,14 +122,265 @@ main {
   color: white;
 }
 
-footer {
-  background-color: #75cac3;
-  padding: 30px;
-  color: white;
-  text-align: center;
+/*parte de Aldi*/
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
 }
 
-footer a {
+/*Css Home*/
+.bannerHome {
+  align-self: center;
+}
+
+
+.explicacion {
+  align-self: center;
+  background-color: #F34573;
   color: white;
-  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  text-align: justify;
+  border-bottom-right-radius: 20px;
+  box-shadow: #2a6171 2px 2px;
+}
+
+.explicacion p {
+  font-family: 'Lato', sans-serif;
+}
+
+.tarjeta-1 {
+  background-image: url("../img-Aldi/bg-seriales.png");
+  display: flex;
+  padding: 2% 3%;
+}
+
+.botonJugar {
+  text-align: center;
+  border: 2px solid #2a6171;
+  border-radius: 30px;
+  width: 45%;
+  padding: 5px 0 5px 0;
+  background-color: #75cac3;
+  margin: auto;
+  color: #2a6171;
+  font-family: 'Righteous', cursive;
+}
+
+/*Css Juego*/
+.tarjetaJuegoA {
+  background-image: url("../img-Aldi/bg-seriales.png");
+  display: flex;
+  padding: 0 7%;
+
+}
+
+.tituloA {
+  font-family: 'Righteous', cursive;
+  align-self: center;
+  color: white;
+  background-color: #F34573;
+  box-shadow: #2a6171 4px 4px;
+  border-bottom-right-radius: 20px;
+}
+
+.pregunta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.respuesta {
+  flex-basis: 50%;
+}
+
+.respuesta button {
+  font-family: 'Lato', sans-serif;
+  color: #2a6171;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #75cac3;
+  border: 3px solid #2a6171;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  /*background-image: url(img-Aldi/LaCasaDePapel1.jpg);
+  background-size: cover;*/
+  }
+
+  /*Media queries*/
+ @media (min-width:320px){
+  .tarjeta-1, .tarjetaJuegoA {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .bannerHome {
+    border-left: none;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  #banner1 {display: block;}
+  #banner2 {display: none;}
+
+  .bannerHome img {
+    max-width: 100%;
+  }
+
+  .tarjetaJuegoA {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .tituloA{
+    text-align: center;
+    padding: 20px;
+  }
+
+  @media (min-width:720px){
+
+
+    #banner1 {display: none;}
+    #banner2 {display: block;}
+
+    .bannerHome img {
+      max-width: 100%;
+    }
+
+    .tarjetaJuegoA {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    .pregunta{
+      height: 75%;
+    }
+  }
+
+
+  @media (min-width:1200px){
+    .bannerHome{
+      margin-top: 0;
+    }
+
+    .bannerHome img {
+      width: 100vw;
+    }
+
+    .explicacion {
+      margin-top: 1%
+    }
+
+    .explicacion p {
+      font-size: 1.1em;
+    }
+
+    .tarjeta-1 {
+      padding: 4% 3%;
+    }
+
+    .tarjetaJuegoA {
+    padding: 60px 0;
+    }
+
+    .tituloA,
+    .pregunta {
+      width: 75%;
+    }
+
+    .tituloA{
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+    }
+
+    .respuesta {
+      font-size: 2em;
+    }
+
+  }
+  /**perteneciente a pagina de preguntas frecuentes**/
+main .main-pf {
+  padding: 30px;
+  background-image: url(../img/bg-seriales.png);
+
+}
+
+.preguntas-frecuentes{
+width:80%;
+margin: 0 auto;
+}
+.card-header{
+width: 100%;
+background-color: #f34573;
+color: black;
+
+}
+.card-body{
+text-align: left;
+font-family: Verdana, cursive;
+}
+
+.font-preguntas{
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  font-size: 1.5rem;
+  text-align: left;
+  color: white;
+
+}
+.font-preguntas:hover{
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  text-align: left;
+  color: #75cac3;
+
+}
+/**Codigo de Footer**/
+.main-footer{
+
+  background-image: url(../img/bg-seriales.png);
+}
+footer {
+
+	width:100%; /* Establecemos que el header abarque el 100% del documento */
+	
+	background-image: url(../img/bg-seriales2.png);
+  width: 100%;
+  height:100px;
+
+  margin-top: 30px;
+  /*FLEXBOX*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+
+  }
+  footer a{
+    width: 16.66%;
+    font-family: 'Righteous', cursive;
+    font-size: 1.2rem;
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    border-left:1px solid #fff;
+
+  }
+  footer a:hover{
+    color:#f34573;
+    text-decoration: none;
+    }
+    footer a:nth-child(1){
+      border-left: 0;
+    }
+
 }

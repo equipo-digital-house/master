@@ -1,16 +1,14 @@
 <?php
 ?>
+<main class="main-footer">
 <footer>
-  <div class="wrapper">
+  <div class="menu-secundario">
+    <a href="index1.php">Home</a>
+    <a href="juego.php">Jugar!</a>
+    <a href="preguntas.php">Preguntas</a>
+    <a href="registro.php">Registrarse</a>
+    <a href="login.php">Login</a>
 
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Jugar!</a>
-      <a href="#">Login</a>
-      <a href="#">Registro</a>
-      <a href="#">Preguntas</a>
-    </nav>
-    
   </div>
-
 </footer>
+</main>
