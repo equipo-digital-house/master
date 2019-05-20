@@ -45,6 +45,10 @@ padding-bottom: 10px;
   background-color: #75cac3;
 }
 
+.menu-items a.play-btn {
+  background-color: #f34472;
+}
+
 main {
   padding: 30px;
   background-image: url(../img/bg-seriales.png);
