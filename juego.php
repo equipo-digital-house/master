@@ -22,9 +22,9 @@
   </head>
   <body>
     <div class="container-fluid p-0">
-      <nav>
+
         <?php include('php/header.php'); ?>
-      </nav>
+
 
       <section>
         <div class="tarjetaJuegoA">
@@ -55,9 +55,9 @@
         </div>
       </section>
 
-      <footer>
+
       <?php include('php/footer.php'); ?>
-      </footer>
+  
 
     </div>
   </body>

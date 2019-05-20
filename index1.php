@@ -22,13 +22,13 @@
   </head>
   <body>
     <div class="container-fluid p-0">
-      <nav>
+
         <?php include('php/header.php'); ?>
-      </nav>
+      
 
       <section>
         <div class="tarjeta-1">
-          
+
           <div class="bannerHome">
             <div id="banner1"><img src="img-Aldi/banner-home-media.png" alt="bannerHome"></div>
             <div id="banner2"><img src="img-Aldi/banner-home.png" alt="bannerHome"></div>
@@ -42,9 +42,9 @@
       </div>
       </section>
 
-      <footer>
+
       <?php include('php/footer.php'); ?>
-      </footer>
+
 
     </div>
   </body>
