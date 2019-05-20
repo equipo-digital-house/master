@@ -22,9 +22,11 @@
   </head>
   <body>
     <div class="container-fluid p-0">
-      <nav>
-        <?php include('php/header.php'); ?>
-      </nav>
+
+        <?php
+         require_once('php/header.php');
+       ?>
+
 
       <section>
         <div class="tarjeta-1">
@@ -42,9 +44,11 @@
       </div>
       </section>
 
-      <footer>
-      <?php include('php/footer.php'); ?>
-      </footer>
+
+      <?php
+      require_once('php/footer.php');
+      ?>
+
 
     </div>
   </body>

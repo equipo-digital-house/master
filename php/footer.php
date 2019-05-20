@@ -1,7 +1,7 @@
 <?php
 ?>
 <main class="main-footer">
-<footer>
+<footer class="footer-principal">
   <div class="menu-secundario">
     <a href="index1.php">Home</a>
     <a href="juego.php">Jugar!</a>

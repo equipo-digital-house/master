@@ -5,6 +5,7 @@
 }
 
 nav {
+  background-image: url(../img/bg-seriales3.png);
   padding: 20px;
 }
 
@@ -173,11 +174,15 @@ main {
   text-transform: uppercase;
 }
 
+.botonJugar:hover {
+  color:#f34573;
+  text-decoration: none;
+  }
+
 /*Css Juego*/
 .tarjetaJuegoA {
   background-image: url("../img-Aldi/bg-seriales.png");
   display: flex;
-  padding: 0 7%;
 
 }
 
@@ -232,12 +237,14 @@ main {
   #banner2 {display: none;}
 
   .bannerHome img {
-    max-width: 100%;
+    width: 100%;
   }
 
   .tarjetaJuegoA {
     flex-direction: row;
-    padding: 10px;
+    padding-top: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 
   .tituloA{
@@ -258,10 +265,16 @@ main {
     .tarjetaJuegoA {
       flex-direction: column;
       flex-wrap: nowrap;
+      padding-top: 4%;
+    }
+
+    .tituloA{
+      width: 90%;
     }
 
     .pregunta{
       height: 75%;
+      width: 90%;
     }
   }
 
@@ -285,16 +298,17 @@ main {
     }
 
     .tarjeta-1 {
-      padding: 4% 3%;
+      padding-top: 4%;
     }
 
     .tarjetaJuegoA {
-    padding: 60px 0;
+    padding-top: 4%;
+    padding-bottom: 1%;
     }
 
     .tituloA,
     .pregunta {
-      width: 75%;
+      width: 90%;
     }
 
     .tituloA{
@@ -349,8 +363,9 @@ font-family: Verdana, cursive;
 .main-footer{
 
   background-image: url(../img/bg-seriales.png);
+
 }
-footer {
+.footer-principal{
 
 	width:100%; /* Establecemos que el header abarque el 100% del documento */
 
@@ -368,7 +383,7 @@ footer {
   border-radius: 20px 20px 0 0;
 
   }
-  footer a{
+  .footer-principal a{
     width: 16.66%;
     font-family: 'Righteous', cursive;
     font-size: 1.2rem;
@@ -379,11 +394,11 @@ footer {
     border-left:1px solid #fff;
 
   }
-  footer a:hover{
+  .footer-principal:hover{
     color:#f34573;
     text-decoration: none;
     }
-    footer a:nth-child(1){
+  .footer-principal a:nth-child(1){
       border-left: 0;
     }
 
