@@ -255,7 +255,21 @@ main {
     text-align: center;
     padding: 20px;
   }
+  .footer-principal a{
+    width: 100vw;
+    font-family: 'Righteous', cursive;
+    font-size:0.7rem;
+    padding: 3px;
 
+    }
+    .font-preguntas{
+
+      font-size: 1rem;
+
+
+    }
+
+    }
   @media (min-width:720px){
 
 
@@ -284,8 +298,20 @@ main {
       height: 75%;
       width: 90%;
     }
-  }
+    .footer-principal a{
+      width: 100vw;
+      font-family: 'Righteous', cursive;
+      font-size:1rem;
+      padding: 5px;
 
+      }
+      .font-preguntas{
+
+        font-size: 1.2rem;
+
+
+      }
+  }
 
   @media (min-width:1200px){
     .bannerHome{
@@ -328,6 +354,19 @@ main {
     .respuesta {
       font-size: 2em;
     }
+    .footer-principal a{
+      width: 100vw;
+      font-family: 'Righteous', cursive;
+      font-size:1.3rem;
+      padding: 6px;
+
+      }
+      .font-preguntas{
+
+        font-size: 1.5rem;
+
+
+      }
 
   }
   /**perteneciente a pagina de preguntas frecuentes**/
@@ -355,7 +394,6 @@ font-family: Verdana, cursive;
 .font-preguntas{
   text-decoration: none;
   font-family: 'Righteous', cursive;
-  font-size: 1.5rem;
   text-align: left;
   color: white;
 
@@ -392,22 +430,16 @@ font-family: Verdana, cursive;
 
   }
   .footer-principal a{
-    width: 16.66%;
-    font-family: 'Righteous', cursive;
-    font-size: 1.2rem;
     color:#fff;
     text-align: center;
     text-decoration: none;
-    padding: 5px;
     border-left:1px solid #fff;
 
   }
-  .footer-principal:hover{
+  .footer-principal a:hover{
     color:#f34573;
     text-decoration: none;
     }
   .footer-principal a:nth-child(1){
       border-left: 0;
     }
-
-}
