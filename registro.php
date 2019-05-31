@@ -1,3 +1,24 @@
+
+<?php
+
+require_once("helpers.php");
+
+// require_once("controladores/funciones.php");
+
+if($_POST) {
+
+  $errores = validar($_POST);
+  if(count($errores)== 0){
+    $avatar = armarAvatar($_FILES);
+    $usuario = armarUsuario($_POST, $avatar);
+    guardarUsuario($usuario);
+    header("location: login.php");
+    exit;
+  }
+
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,6 +50,8 @@
             <input type="password" name="password" value=""required>
             <label for="repassword">Repetir contraseña*</label>
             <input type="password" name="repassword" value=""required>
+            <label for="avatar">Foto de tu perfil:</label>
+            <input  type="file" name="avatar" value="">
             <button class="btn-formulario" type="submit" name="submit">Jugar!</button>
           </form>
         </div>
