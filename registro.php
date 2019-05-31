@@ -25,8 +25,10 @@
             <input type="text" name="nombre" value="" required>
             <label for="mail">Tu correo electrónico*</label>
             <input type="email" name="mail" value="" required>
-            <label for="contrasenia">Contraseña*</label>
-            <input type="password" name="contrasenia" value=""required>
+            <label for="password">Contraseña*</label>
+            <input type="password" name="password" value=""required>
+            <label for="repassword">Repetir contraseña*</label>
+            <input type="password" name="repassword" value=""required>
             <button class="btn-formulario" type="submit" name="submit">Jugar!</button>
           </form>
         </div>
