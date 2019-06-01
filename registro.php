@@ -3,13 +3,13 @@
 
 require_once("helpers.php");
 
-// require_once("controladores/funciones.php");
+require_once("controladores/funciones.php");
 
 if($_POST) {
 
-  $errores = validar($_POST);
+  $errores = validar($_POST, 'registro');
   if(count($errores)== 0){
-    $avatar = armarAvatar($_FILES);
+    $avatar = armarAvatar($_FILES, $_POST["email"]);
     $usuario = armarUsuario($_POST, $avatar);
     guardarUsuario($usuario);
     header("location: login.php");
@@ -41,11 +41,20 @@ if($_POST) {
       <h2 class="titulo">Registrate en segundos</h2>
       <div class="row">
         <div class="col-12 col-lg-6 offset-lg-3">
-          <form class="registro" action="jugar.php" method="post">
+
+          <?php if(isset($errores)) :?>
+          <ul class="alert alert-warning">
+            <?php foreach ($errores as $key => $value):?>
+              <li><?=$value?></li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
+
+          <form class="registro" action="registro.php" method="post">
             <label for="nombre">Nombre de usuario*</label>
             <input type="text" name="nombre" value="" required>
-            <label for="mail">Tu correo electrónico*</label>
-            <input type="email" name="mail" value="" required>
+            <label for="email">Tu correo electrónico*</label>
+            <input type="email" name="email" value="" required>
             <label for="password">Contraseña*</label>
             <input type="password" name="password" value=""required>
             <label for="repassword">Repetir contraseña*</label>

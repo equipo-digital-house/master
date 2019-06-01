@@ -22,7 +22,9 @@
   <body>
     <div class="container-fluid p-0">
 
-        <?php required_once('php/header.php');
+        <?php
+
+        require_once('php/header.php');
         ?>
 
 
