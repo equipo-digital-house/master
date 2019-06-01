@@ -41,6 +41,15 @@ if($_POST) {
       <div class="row">
         <div class="col-12 col-lg-6 offset-lg-3">
           <form class="registro" action="registro.php" method="post" enctype= "multipart/form-data">
+
+            <?php if(isset($errores)) :?>
+              <ul class="alert alert-danger">
+            <?php foreach ($errores as $key => $value) :?>
+              <li> <?=$value?></li>  
+            <?php endforeach; ?>
+             </ul>
+           <?php endif; ?>
+
             <label for="nombre">Nombre de usuario*</label>
             <input type="text" name="nombre" value="" required>
             <label for="email">Tu correo electrónico*</label>
