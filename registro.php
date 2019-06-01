@@ -15,7 +15,6 @@ if($_POST) {
     header("location: login.php");
     exit;
   }
-
 }
  ?>
 
@@ -41,16 +40,7 @@ if($_POST) {
       <h2 class="titulo">Registrate en segundos</h2>
       <div class="row">
         <div class="col-12 col-lg-6 offset-lg-3">
-
-          <?php if(isset($errores)) :?>
-          <ul class="alert alert-warning">
-            <?php foreach ($errores as $key => $value):?>
-              <li><?=$value?></li>
-            <?php endforeach; ?>
-          </ul>
-        <?php endif; ?>
-
-          <form class="registro" action="registro.php" method="post">
+          <form class="registro" action="registro.php" method="post" enctype= "multipart/form-data">
             <label for="nombre">Nombre de usuario*</label>
             <input type="text" name="nombre" value="" required>
             <label for="email">Tu correo electrónico*</label>
@@ -60,7 +50,7 @@ if($_POST) {
             <label for="repassword">Repetir contraseña*</label>
             <input type="password" name="repassword" value=""required>
             <label for="avatar">Foto de tu perfil:</label>
-            <input  type="file" name="avatar" value="">
+            <input  type="file" name="avatar" value=""/>
             <button class="btn-formulario" type="submit" name="submit">Jugar!</button>
           </form>
         </div>
