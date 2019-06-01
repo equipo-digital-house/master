@@ -9,7 +9,7 @@ function armarAvatar($imagen){
   $nombre = $imagen["avatar"]["name"];
   $ext = pathinfo($nombre, PATHINFO_EXTENSION);
   $archivoOrigen = $imagen["avatar"]["tmp_name"];
-  $archivoDestino = dirname(__DIR__)
+  $archivoDestino = dirname(__DIR__);
   $archivoDestino = $archivoDestino."/img/";
   $avatar = uniqid("SERIALES_");
   $archivoDestino = $archivoDestino.$avatar;
