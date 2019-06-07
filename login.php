@@ -1,3 +1,40 @@
+<?php
+  require_once("controladores/funciones.php");
+  require_once("helpers.php");
+
+  if($_POST){
+    $errores = validar($_POST,'login');
+
+    if(count($errores) == 0){
+
+      $usuario = buscarPorEmail($_POST["email"]);
+
+
+      if($usuario == null){
+        $errores["email"]= "Usuario / Contraseña invalidos";
+      }else{
+        if(password_verify($_POST["password"],$usuario["password"])==false){
+          $errores["password"]="Usuario / Contraseña invalidos";
+        }else {
+          seteoUsuario($usuario,$_POST);
+          if(validarAcceso()){
+            header("location: juego.php");
+            exit;
+          }else{
+            header("location: login.php");
+            exit;
+          }
+
+        }
+      }
+
+      }
+  }
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,11 +57,20 @@
       <h2 class="titulo">Iniciar sesion</h2>
       <div class="row">
         <div class="col-12 col-lg-6 offset-lg-3">
-          <form class="registro" action="jugar.php" method="post">
-            <label for="nombre">Usuario o Mail*</label>
-            <input type="text" name="nombre" value="" required>
-            <label for="contrasenia">Contraseña*</label>
-            <input type="password" name="contrasenia" value=""required>
+          <?php
+          if(isset($errores)):?>
+          <ul class="alert alert-danger">
+            <?php foreach ($errores as $key => $value) :?>
+              <li><?=$value;?></li>
+            <?php endforeach;?>
+          </ul>
+
+        <?php endif;?>
+          <form class="registro" action="login.php" method="post">
+            <label for="email">Email*</label>
+            <input type="text" name="email" value="" required>
+            <label for="password">Contraseña*</label>
+            <input type="password" name="password" value=""required>
             <button class="btn-formulario" type="submit" name="submit">iniciar sesión</button>
             <div class="recordar">
               <input name="recordarme" type="checkbox" id="check1" value="recordarme">
