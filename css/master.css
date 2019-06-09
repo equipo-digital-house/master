@@ -180,6 +180,23 @@ main {
   }
 
 /*Css Juego*/
+.bienvenida {
+  display: flex;
+  margin-bottom: 0.5%;
+  border-radius: 10px;
+}
+
+.saludo {
+  color: #F34573;
+  padding: 0.5%;
+  font-size: 1rem;
+  padding-right: 2%;
+  flex: 1;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+
 .tarjetaJuegoA {
   background-image: url("../img/bg-seriales.png");
   display: flex;

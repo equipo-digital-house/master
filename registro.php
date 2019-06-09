@@ -7,6 +7,10 @@ require_once("controladores/funciones.php");
 
 if($_POST) {
   $errores = validar($_POST,'registro');
+  if(existeUsuario($_POST["email"])){
+    $errores["email"] = "El email está asociado con otre usuarie";
+  } else {
+    
   if(count($errores)== 0){
     $avatar = armarAvatar($_FILES, $_POST["email"]);
     $usuario = armarUsuario($_POST, $avatar);
@@ -14,6 +18,7 @@ if($_POST) {
     header("location: login.php");
     exit;
   }
+}
 }
  ?>
 
@@ -50,16 +55,16 @@ if($_POST) {
 
 
             <label for="nombre">Nombre de usuario*</label>
-            <input type="text" name="nombre" value="" required>
+            <input type="text" name="nombre" value="<?= isset($errores["nombre"])? "": persistir("nombre") ?>" required>
             <label for="email">Tu correo electrónico*</label>
-            <input type="email" name="email" value="" required>
+            <input type="email" name="email" value="<?= isset($errores["email"])? "": persistir("email") ?>" required>
             <label for="password">Contraseña*</label>
             <input type="password" name="password" value=""required>
             <label for="repassword">Repetir contraseña*</label>
             <input type="password" name="repassword" value=""required>
             <label for="avatar">Foto de tu perfil:</label>
             <input  type="file" name="avatar" value="">
-            <button class="btn-formulario" type="submit" name="submit">Jugar!</button>
+            <button class="btn-formulario" type="submit" name="submit">¡Registrarme!</button>
           </form>
         </div>
       </div>

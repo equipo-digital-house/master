@@ -1,3 +1,14 @@
+<?php
+//require_once("controladores/funciones.php");
+//if(!isset($_SESSION["email"])){
+  //header("location: login.php");
+  //exit;
+//}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -29,7 +40,12 @@
 
 
       <section>
+         <div class="bienvenida">
+           <h3 class="saludo">¡Hola, usuarie! ¿Estás listx para jugar?</h3>
+         </div>
+
         <div class="tarjetaJuegoA">
+
           <?php require_once('php/baseDatos.php');
           foreach ($titulo as $key): ?>
           <h2 class="tituloA"><?=$key["Pregunta"]?></h2>

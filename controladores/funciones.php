@@ -22,9 +22,9 @@ function validar($datos,$bandera){
     $password = trim($datos["password"]);
     if(isset($datos["password"])){
         if(empty($password)){
-            $errores["password"] = "El password no puede estar vacio";
+            $errores["password"] = "La contraseña no puede estar vacía";
         }elseif(strlen($password)<6){
-            $errores["password"]="El password debe tener mínimo 6 caracteres";
+            $errores["password"]="La contraseña debe tener 6 caracteres como mínimo";
         }
     }
 
@@ -139,6 +139,18 @@ function validarAcceso(){
     }else{
         return false;
     }
+}
+
+//FUNCIÓN EXISTE USUARIO
+function existeUsuario($email){
+$usuarios = abrirBaseJSON("usuarios.json");
+foreach ($usuarios as $key => $value){
+if($email == $value["email"]){
+  return true;
+} else {
+  return false;
+}
+}
 }
 
 ?>
