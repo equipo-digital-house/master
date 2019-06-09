@@ -188,7 +188,7 @@ main {
 
 .saludo {
   color: #F34573;
-  padding: 0.5%;
+  padding: 0 10px;;
   font-size: 1rem;
   padding-right: 2%;
   flex: 1;
@@ -242,6 +242,7 @@ main {
   .saludo {
     text-align: center;
     padding-bottom: 2%;
+    padding: 0 10px;
   }
 
   .tarjeta-1, .tarjetaJuegoA {
@@ -297,6 +298,7 @@ main {
   .saludo{
     text-align: right;
     padding-bottom: 2%;
+    padding: 0 10px;
     }
 
     #banner1 {display: none;}

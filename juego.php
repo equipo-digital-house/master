@@ -1,11 +1,10 @@
 <?php
 require_once("controladores/funciones.php");
+
 if(!isset($_SESSION["email"])){
   header("location: login.php");
   exit;
 }
-
-
 
 ?>
 
@@ -40,9 +39,6 @@ if(!isset($_SESSION["email"])){
 
 
       <section>
-         <div class="bienvenida">
-           <h3 class="saludo"><?="Hola, ".$_SESSION["nombre"]."."." "."¿Estás listx para jugar?";?></h3>
-         </div>
 
         <div class="tarjetaJuegoA">
 
