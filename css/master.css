@@ -70,7 +70,7 @@ main {
   font-size: 2.6rem;
 }
 
-.registro {
+.registro, .contraseñaNueva {
   display: flex;
   flex-direction: column;
   background-color: #f34573;
@@ -80,7 +80,7 @@ main {
   margin: auto;
 }
 
-.registro label {
+.registro, .contraseñaNueva label {
   font-size: 1.2rem;
 }
 
@@ -192,7 +192,6 @@ main {
   font-size: 1rem;
   padding-right: 2%;
   flex: 1;
-  text-align: right;
   margin-bottom: 0;
 }
 
@@ -239,6 +238,12 @@ main {
 
   /*Media queries*/
  @media (min-width:320px){
+
+  .saludo {
+    text-align: center;
+    padding-bottom: 2%;
+  }
+
   .tarjeta-1, .tarjetaJuegoA {
     flex-direction: column;
     flex-wrap: wrap;
@@ -289,6 +294,10 @@ main {
     }
   @media (min-width:720px){
 
+  .saludo{
+    text-align: right;
+    padding-bottom: 2%;
+    }
 
     #banner1 {display: none;}
     #banner2 {display: block;}

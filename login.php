@@ -76,7 +76,7 @@
               <input name="recordarme" type="checkbox" id="check1" value="recordarme">
               <label for="check1">Recordarme</label>
             </div>
-            <a class="olvidar-pass" href="#">¿Olvidó su contraseña?</a>
+            <a class="olvidar-pass" href="olvideContraseña.php">¿Olvidó su contraseña?</a>
           </form>
         </div>
       </div>
