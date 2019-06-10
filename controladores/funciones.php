@@ -130,6 +130,7 @@ function seteoUsuario($usuario,$datos){
 
 }
 
+
 function validarAcceso(){
     if(isset($_SESSION["email"])){
         return true;
@@ -145,13 +146,16 @@ function validarAcceso(){
 //FUNCIÓN EXISTE USUARIO
 function existeUsuario($email){
 $usuarios = abrirBaseJSON("usuarios.json");
+
 foreach ($usuarios as $key => $value){
-if($email == $value["email"]){
-  return true;
-} else {
-  return false;
+
+    if($email == $value["email"])
+    {
+
+          return true;
+    }
 }
-}
+
 }
 
 function armarRegistroOlvide($datos){
@@ -173,5 +177,6 @@ function armarRegistroOlvide($datos){
     }
 
 }
+
 
 ?>

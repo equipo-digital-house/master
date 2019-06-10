@@ -1,6 +1,7 @@
 
 <?php
-
+$mostrar="noMostrar";
+$valor=0;
 require_once("helpers.php");
 
 require_once("controladores/funciones.php");
@@ -8,16 +9,22 @@ require_once("controladores/funciones.php");
 $titulo = "Registro";
 
 if($_POST) {
+
   $errores = validar($_POST,'registro');
-  if(existeUsuario($_POST["email"])){
-    $errores["email"] = "El email está asociado con otre usuarie";
+  $existeUsuario=existeUsuario($_POST["email"]);
+
+  if($existeUsuario==true){
+
+    $errores["email"] = "El correo electrónico está asociado con otro usuario";
+    $valor=2;
   } else {
 
   if(count($errores)== 0){
     $avatar = armarAvatar($_FILES, $_POST["email"]);
     $usuario = armarUsuario($_POST, $avatar);
     guardarUsuario($usuario);
-    header("location: login.php");
+    $valor=1;
+    header("location: login.php?mensaje=$valor");
     exit;
   }
 }
@@ -44,7 +51,16 @@ require_once("php/head.php");
             <ul class="alert alert-danger">
               <?php foreach ($errores as $key => $value) :?>
                 <li> <?=$value?></li>
-              <?php endforeach; ?>
+              <?php endforeach;
+              if ($valor==2)
+              $mostrar="mostrar";?>
+              <div class="<?=$mostrar?> alert alert-danger">
+              <p class=<?=$mostrar?>> Este correo electrónico ya existe, puede se haya registrado con este Email y no recuerde su contraseña. <a class=<?=$mostrar?>"rosa olvidar-pass" href="olvideContraseña.php">¿ Si es así, ingrese aquí?</a> </p>
+              <p class=<?=$mostrar?>> Si no, le solicitamos complete este formulario con otro correo electrónico. </p>
+
+            <? endif;
+              $valor=0;
+              $mostrar="noMostrar"; ?>
             </ul>
           <?php endif; ?>
           <form class="registro" action="registro.php" method="post" enctype= "multipart/form-data">

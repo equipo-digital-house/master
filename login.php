@@ -1,8 +1,13 @@
 <?php
   require_once("controladores/funciones.php");
   require_once("helpers.php");
-
   $titulo = "Login";
+
+  $mostrar="noMostrar";
+  $valor=0;
+  if($_GET){
+  $valor=$_GET["mensaje"];
+  }
 
   if($_POST){
     $errores = validar($_POST,'login');
@@ -53,6 +58,16 @@ require_once("php/head.php");
       <h2 class="titulo">Iniciar sesion</h2>
       <div class="row">
         <div class="col-12 col-lg-6 offset-lg-3">
+          <?php if ($valor==1)
+            $mostrar="mostrar";?>
+            <div class="<?=$mostrar?> alert alert-success">
+            <p class=<?=$mostrar?>> Registro de datos correctos.</p>
+            <p class=<?=$mostrar?>> ¡Sólo te falta iniciar sesión para jugar! </p>
+
+          <? endif;
+            $valor=0;
+            $mostrar="noMostrar"; ?>
+          </div>
           <?php
           if(isset($errores)):?>
           <ul class="alert alert-danger">

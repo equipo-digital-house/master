@@ -471,3 +471,18 @@ font-family: Verdana, cursive;
   .footer-principal a:nth-child(1){
       border-left: 0;
     }
+    .mostrar {
+          display: block;
+          text-align: center;
+          }
+    .noMostrar{
+        display: none;
+            }
+  .avatar{
+  display: flex;
+  flex-direction: row;
+
+  }
+  .avatar img{
+    border:1px solid #75cac3;
+  }
