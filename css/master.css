@@ -478,3 +478,11 @@ font-family: Verdana, cursive;
     .noMostrar{
         display: none;
             }
+  .avatar{
+  display: flex;
+  flex-direction: row;
+
+  }
+  .avatar img{
+    border:1px solid #75cac3;
+  }

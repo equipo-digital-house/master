@@ -130,6 +130,7 @@ function seteoUsuario($usuario,$datos){
 
 }
 
+
 function validarAcceso(){
     if(isset($_SESSION["email"])){
         return true;
@@ -176,5 +177,6 @@ function armarRegistroOlvide($datos){
     }
 
 }
+
 
 ?>
