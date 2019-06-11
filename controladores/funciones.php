@@ -179,4 +179,115 @@ function armarRegistroOlvide($datos){
 }
 
 
+function modificarUsuario($datos,$email,$avatar){
+$valor=[];
+
+    $usuarios = abrirBaseJSON("usuarios.json");
+    foreach ($usuarios as $key => $usuario) {
+    if($email["email"] == $usuario["email"]){
+          if ($datos["accion"]==1) {
+            // menu modificar nombre de usuario e Email
+                if ($usuario["nombre"] != $datos["nombre"]) {
+                  // cambio nombre de usuario
+                  $usuario["nombre"] = $datos["nombre"];
+                  $valor["1"]="Su nombre de usuario ha sido modificado";
+                }
+                if ($usuario["email"] != $datos["email"]) {
+                  // cambio email de usuario
+                  $usuario["email"] = $datos["email"];
+                  $valor["2"]="Su correo electronico ha sido modificado";
+                }
+            }
+            if ($datos["accion"]==2) {
+
+                    // cambio de imagen avatar
+                    $usuario["avatar"] = $avatar;
+                    $valor["3"]="Su imagen ha sido cambiada";
+            }
+            if ($datos["accion"]==3) {
+
+                    // cambio de password
+                    $usuario["password"] = $datos["password"];
+                    $usuario["password"]= password_hash($datos["password"],PASSWORD_DEFAULT);
+                    $valor["4"]="La contraseña ha sido modificada";
+                  }
+
+
+    $usuarios[$key] = $usuario;
+    }
+    $usuarios[$key] = $usuario;
+
+    }
+
+
+    unlink("usuarios.json");
+    foreach ($usuarios as  $usuario) {
+        $jsusuario = json_encode($usuario);
+        file_put_contents('usuarios.json',$jsusuario. PHP_EOL,FILE_APPEND);
+    }
+return $valor;
+}
+function validarPerfil($datos,$bandera){
+$errores=[];
+          if ($datos["accion"]==1) {
+            // menu validar usuario e Email
+            if(isset($datos["nombre"])){
+                $nombre = trim($datos["nombre"]);
+                if(empty($nombre)){
+                    $errores["nombre"]="El campo no puede estar vacio";
+                }
+            }
+            if(isset($datos["email"])){
+                $email = trim($datos["email"]);
+                if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+                  $errores["email"]="El email no es válido";
+                }
+            }
+
+            }
+            if ($datos["accion"]==2) {
+
+                    // validar imagen avatar
+                    if(isset($_FILES) && $bandera == 'registro'){
+                        if($_FILES["avatar"]["error"]!=0){
+                            $errores["avatar"]="No recibi la imagen";
+                        }
+                        $avatar = $_FILES["avatar"]["name"];
+
+                        $ext = pathinfo($avatar,PATHINFO_EXTENSION);
+
+                        if($ext != "jpg" && $ext != "png"){
+                            $errores["avatar"] = "La extensión debe ser PNG ó JPG";
+
+                        }
+                    }
+            }
+            if ($datos["accion"]==3) {
+
+                    // validar password
+                    $password = trim($datos["password"]);
+                    if(isset($datos["password"])){
+                        if(empty($password)){
+                            $errores["password"] = "La contraseña no puede estar vacía";
+                        }elseif(strlen($password)<6){
+                            $errores["password"]="La contraseña debe tener 6 caracteres como mínimo";
+                        }
+                    }
+
+                    if(isset($datos["repassword"])){
+                        $repassword = trim($datos["repassword"]);
+                        if(empty($repassword)){
+                            $errores["repassword"]= "El campo no debe estar vacio";
+                        }
+                        if($password != $repassword){
+                            $errores["repassword"]= "Las contraseñas deben coincidir";
+                        }
+                    }
+
+                  }
+
+
+return $errores;
+}
+
 ?>

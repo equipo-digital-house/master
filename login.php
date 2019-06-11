@@ -61,9 +61,8 @@ require_once("php/head.php");
           <?php if ($valor==1)
             $mostrar="mostrar";?>
             <div class="<?=$mostrar?> alert alert-success">
-            <p class=<?=$mostrar?>> Registro de datos correctos.</p>
-            <p class=<?=$mostrar?>> ¡Sólo te falta iniciar sesión para jugar! </p>
-
+              <p class=<?=$mostrar?>> Se han ingresado correctamente los datos.</p>
+              <p class=<?=$mostrar?>> ¡Vuelva a iniciar sesión para jugar! </p>
           <? endif;
             $valor=0;
             $mostrar="noMostrar"; ?>
