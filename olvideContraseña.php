@@ -43,11 +43,11 @@ require_once("php/head.php");
         <?php endif;?>
           <form class="contraseñaNueva" action="" method="post" enctype="multipart/form-data">
             <label for="email">Ingresá tu email*</label>
-            <input type="text" name="email" value="<?= isset($errores["email"])? "": persistir("email") ?>" required placeholder="Ingresá tu email">
+            <input type="text" name="email" value="<?= isset($errores["email"])? "": persistir("email") ?>" required>
             <label for="password">Ingresá tu nueva contraseña*</label>
-            <input type="password" name="password" value=""required placeholder="Ingresá tu contraseña nueva">
+            <input type="password" name="password" value=""required>
             <label for="password">Repetí tu nueva contraseña*</label>
-            <input type="password" name="repassword" value=""required placeholder="Repetí tu contraseña nueva">
+            <input type="password" name="repassword" value=""required>
             <button class="btn-formulario" type="submit" name="submit">enviar</button>
             <p class="aclaracion">Los campos con * deben ser completados</p>
             </div>
