@@ -87,6 +87,7 @@ require_once("php/head.php");
               <label for="check1">Recordarme</label>
             </div>
             <a class="olvidar-pass" href="olvideContraseña.php">¿Olvidó su contraseña?</a>
+            <span class="irARegistro">¿No está registradx aún?<a class="olvidar-pass" href="olvideContraseña.php"> Registrate aquí</a></span>
           </form>
         </div>
       </div>
