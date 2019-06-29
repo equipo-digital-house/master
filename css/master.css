@@ -9,6 +9,11 @@ nav {
   padding: 20px;
 }
 
+.redessociales a{
+    text-decoration: none;
+    color: #2a6171;
+  }
+
 .logo {
   display: flex;
   margin: 0 auto;
@@ -282,6 +287,7 @@ main {
     text-align: center;
     padding: 20px;
   }
+
   .footer-principal a{
     width: 100vw;
     font-family: 'Righteous', cursive;
@@ -290,14 +296,15 @@ main {
 
     }
     .font-preguntas{
-
       font-size: 1rem;
-
-
     }
-
     }
   @media (min-width:720px){
+
+    .redessociales{
+      position: relative;
+      top: -12px;
+    }
 
   .saludo{
     text-align: right;
@@ -346,6 +353,12 @@ main {
   }
 
   @media (min-width:1200px){
+
+    .redessociales{
+      position: relative;
+      top: -24px;
+    }
+
     .bannerHome{
       margin-top: 0;
     }
@@ -396,8 +409,6 @@ main {
       .font-preguntas{
 
         font-size: 1.5rem;
-
-
       }
 
   }
